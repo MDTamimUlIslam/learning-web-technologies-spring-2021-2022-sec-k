@@ -5,7 +5,8 @@
 			<Flat></Flat>
 			<House>H# 38</House>
 			<Road>R# 03</Road>
-			<Place>Bonani,Dhaka</Place>
+			<Place>Bonani</Place>
+			<Area>Dhaka</Area>
 		</Address_Details>
 		<Depertment>Sales</Depertment>
 		<Salary>$20000</Salary>
@@ -17,7 +18,8 @@
 			<Flat>Flat# A/1</Flat>>
 			<House>H# 20</House>
 			<Road>R# 18</Road>
-			<Place>Mirpur,Dhaka</Place>
+			<Place>Mirpur</Place>
+			<Area>Dhaka</Area>
 		</Address_Details>
 		<Depertment>Accounts</Depertment>
 		<Salary>$12000</Salary>
@@ -29,7 +31,8 @@
 			<Flat></Flat>>
 			<House>H# 38</House>
 			<Road>R# 03</Road>
-			<Place>Motijheel,Dhaka</Place>
+			<Place>Motijheel</Place>
+			<Area>Dhaka</Area>
 		</Address_Details>
 		<Depertment>Human Resource</Depertment>
 		<Salary>$30000</Salary>
