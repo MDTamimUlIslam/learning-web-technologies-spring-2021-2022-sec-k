@@ -18,12 +18,14 @@
     </head>
     <body>
         
-        <form>    
+        <form>  
+        <form method="REQUEST" action="">  
       <h3>2.</h3>
       <form method="REQUEST" action="">   
                <p>Email:</p>
                 
-                <input type="email" name="email" value="" /> 
+                <input type="email" name="email" value="<?=$uemail?>" /> 
+                <?=$uemailError?>
                 <br>
                 <input type="submit" name="submit" value="Submit">
                 <input type="reset" name="reset" value="Clear">
