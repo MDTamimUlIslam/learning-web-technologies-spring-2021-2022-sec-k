@@ -74,7 +74,7 @@
 			
 				<td>
 					<a href="../views/editserviceprovider.php?id=<?=$userArray[0]?>"> EDIT </a> | 
-					<a href="delete.php?id=<?=$userArray[0]?>"> DELETE </a>  
+					<a href="../views/deleteserviceprovider.php?id=<?=$userArray[0]?>"> DELETE </a>  
 				</td> 
 			</tr>
 

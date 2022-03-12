@@ -74,7 +74,7 @@
 			
 				<td>
 					<a href="../views/editbookings.php?id=<?=$userArray[0]?>"> EDIT </a> | 
-					<a href="delete.php?id=<?=$userArray[0]?>"> DELETE </a>  
+					<a href="../views/deletebookings.php?id=<?=$userArray[0]?>"> DELETE </a>  
 				</td> 
 			</tr>
 

@@ -42,6 +42,55 @@
 </table>
 
 
+<table border="1">
+			<tr>
+				<td>Reporter's Id</td>
+				<td>Reporter's Name</td>
+				<td>Reporters Phone No</td>
+				<td>Reporters Email</td>
+				<td>Report Topic</td>
+				<td>Details</td>
+				
+			</tr>
+
+			<?php 
+				$file = fopen('../models/Reports.txt', 'r');
+				
+				while (!feof($file)) {
+					$user = fgets($file);
+					if($user == null){
+						break;
+					}
+					
+					$userArray = explode("|", $user);
+			?>
+
+			<tr>
+				<td><?=$userArray[0]?></td>
+				<td><?=$userArray[1]?></td>
+				<td><?=$userArray[2]?></td>
+				<td><?=$userArray[3]?></td>
+				<td><?=$userArray[4]?></td>
+				<td><?=$userArray[5]?></td>
+				
+				
+				
+				
+			
+				<td>
+					<a href="../views/deletereport.php?id=<?=$userArray[0]?>"> DELETE </a>  
+				</td> 
+			</tr>
+
+			<?php
+				}
+			?>
+			
+			
+			
+		</table>
+
+
 <Center>CopyRight@<span class="SBoyyy" style="font-size:20px;color:green"><b>E</b></span><span class="SBoyyy">asy Travels </span></Center> 
 	
 </body>

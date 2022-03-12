@@ -81,7 +81,7 @@
 			
 				<td>
 					<a href="../views/editaccountant.php?id=<?=$userArray[0]?>"> EDIT </a> | 
-					<a href="delete.php?id=<?=$userArray[0]?>"> DELETE </a>  
+					<a href="../views/deleteaccountant.php?id=<?=$userArray[0]?>"> DELETE </a>  
 				</td> 
 			</tr>
 
