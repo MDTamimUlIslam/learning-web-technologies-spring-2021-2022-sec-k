@@ -37,11 +37,61 @@
 <tr>
 <td height="150px">
 <center><img src="4.png"><br>
-	<a class="font-effect-neon SBoyyy" style="color: green" href="accountantlist.php.php">Accountant List</a>
+
+	<a class="font-effect-neon SBoyyy" style="color: green" href="accountantlist.php">Accountant List</a>
 	</td>
 </tr>
 </table>
 
+<table border="1">
+			<tr>
+				<td>Accountant No</td>
+				<td>Accountant Name</td>
+				<td>Password</td>
+				<td>Phone</td>
+				<td>Educational Qualification</td>
+				<td>Gender</td>
+				<td>Date Of Birth</td>
+				<td>Blood Group</td>
+			</tr>
+
+			<?php 
+				$file = fopen('../models/accountant.txt', 'r');
+				
+				while (!feof($file)) {
+					$user = fgets($file);
+					if($user == null){
+						break;
+					}
+					
+					$userArray = explode("|", $user);
+			?>
+
+			<tr>
+				<td><?=$userArray[0]?></td>
+				<td><?=$userArray[1]?></td>
+				<td><?=$userArray[2]?></td>
+				<td><?=$userArray[3]?></td>
+				<td><?=$userArray[4]?></td>
+				<td><?=$userArray[5]?></td>
+				<td><?=$userArray[6]?></td>
+				<td><?=$userArray[7]?></td>
+				
+				
+			
+				<td>
+					<a href="../views/editaccountant.php?id=<?=$userArray[0]?>"> EDIT </a> | 
+					<a href="delete.php?id=<?=$userArray[0]?>"> DELETE </a>  
+				</td> 
+			</tr>
+
+			<?php
+				}
+			?>
+			
+			
+			
+		</table>
 
 <Center>CopyRight@<span class="SBoyyy" style="font-size:20px;color:green"><b>E</b></span><span class="SBoyyy">asy Travels </span></Center> 
 	

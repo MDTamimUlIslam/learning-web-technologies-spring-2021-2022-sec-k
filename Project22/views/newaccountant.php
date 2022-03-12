@@ -40,70 +40,61 @@
 	<a class="font-effect-neon SBoyyy" style="color: green" href="newaccountant.php"> Add New Accountant </a>
 	</td>
 </tr>
-</table>
-<center>
-<form method="" action="">
-
-		<table border="1" width="50%">
-
-			<tr height=100>
-				<td colspan="3" align="center"><h1 class="font-effect-neon SBoyyy">Accountant Registration</h1></td>
+<form method="POST" action="../controllers/newaccountantcheck.php" enctype="multipart/form-data">
+	
+		<table border="1"width="50%">
+		<tr>
+				<td>No</td>
+				<td><input type="text" name="no" value=""></td>
 			</tr>
-
-			<tr height=50>
-				<td width="200px">Accountant ID</td>
-				<td width="300px">
-					<input type="text" name="id" value="">
-				</td>
-			
-			</tr>
-			<tr height=50>
+			<tr>
 				<td>Name</td>
-				<td><input type="text" name="Name" value=""></td>
-				
+				<td><input type="text" name="name" value=""></td>
 			</tr>
-			<tr height=50>
-				<td>Email</td>
-				<td><input type="email" name="email" value=""></td>
-				
+
+			<tr>
+				<td>Password</td>
+				<td><input type="password" name="password" value=""></td>
 			</tr>
-			<tr height=50>
+			<tr>
+				<td>Phone</td>
+				<td><input type="Phone" name="Phone" value=""></td>
+			</tr>
+
+			<td>Educational Qualification</td>
+				<td><input type="text" name="education" value=""></td>
+			</tr>
+
+			<tr>
 				<td>Gender</td>
-				<td>
-					<input type="radio" name="gender" value="">Male
-						<input type="radio" name="gender" value="">Female
-						<input type="radio" name="gender" value="">Other
-				</td>
-			
+				<td><input type="radio" name="gender" value="Male">Male
+						<input type="radio" name="gender" value="Female">Female
+						<input type="radio" name="gender" value="others">Other</td>
 			</tr>
-			<tr height=50>
-				<td>Date Of Birth</td>
+			<tr>
+				<td>Date of Birth</td>
 				<td><input type="date" name="date" value=""></td>
-				
 			</tr>
-			<tr height=50>
+			<tr>
 				<td>Blood Group</td>
-				<td><select name="">
-							<option value="">A+</option>
-							<option value="">A-</option>
-							<option value="">B+</option>
-							<option value="">B-</option>
-							<option value="">O+</option>
-							<option value="">O-</option>
+				<td><select name="bloodGroup">
+							<option value="A+">A+</option>
+							<option value="A-">A-</option>
+							<option value="B+">B+</option>
+							<option value="B-">B-</option>
+							<option value="O+">O+</option>
+							<option value="O-">O-</option>
 							
 						</select></td>
-				
 			</tr>
-			
 	
-			<tr height=50>
-				<td colspan="3" align="middle">
-					<input type="button" name="" value="Submit">
-				<input type="button" name="" value="Reset"></td>
-				
+			<tr>
+				<td></td>
+				<td><input type="submit" name="submit" value="Submit">
+				    <input type="reset" name="reset" value="Reset"></td>
 			</tr>
 		</table>
-		
+		</fieldset>
 	</form>
 </center>
 
