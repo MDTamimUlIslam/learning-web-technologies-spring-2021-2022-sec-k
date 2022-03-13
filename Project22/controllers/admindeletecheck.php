@@ -19,11 +19,11 @@
 				$line = fgets($file);
 				$user = explode('|', $line);
 				
-				if($user[0] == $adminusername){
-					$line = $adminusername."|".$adminpass."|".$Address. "|" .$PhoneNo."|".$Email."|".$OtherInfo."\r\n";
-					//$updatedContent .= $line;
+				if($user[0] != $adminusername){
+					//$line = $touristno."|".$TouristName."|".$Address. "|" .$PhoneNo."|".$Email."|".$OtherInfo."\r\n";
+					$updatedContent .= $line;
 				}
-				$updatedContent .= $line;
+				//$updatedContent .= $line;
 				
 			}
 

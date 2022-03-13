@@ -1,9 +1,19 @@
 <?php 
 
 	require('header.php');
-	
-?>
 
+	$id = $_GET['id'];
+
+	$file = fopen('../models/adminlist.txt', 'r');
+
+	while (!feof($file)) {
+		$user = fgets($file);
+		$userArray = explode('|', $user);
+		if($userArray[0] == $id){
+			break;
+		}
+	}
+?>
 <html>
 <head>	
 	<title>Home Page</title>
@@ -31,73 +41,53 @@
 	<a class="font-effect-neon SBoyyy" style="color: red" href="dash.php"> Home </a> |
 	<a class="font-effect-neon SBoyyy" style="color: red" href="myinfo.php"> My Info </a> |
 	<a class="font-effect-neon SBoyyy" style="color: red" href="../controllers/logout.php"> logout </a>
-
-<table>
-<tr>
-<td>
-<center>
-<img src="3.png"><br>
-	<a class="font-effect-neon SBoyyy" style="color: green" href="newadmin.php"> Add New Admin </a>
-	</td>
-</tr>
-</table>
-
-<form method="POST" action="../controllers/newadmincheck.php" enctype="multipart/form-data">
-
-		<table border="1" width="50%">
-
-			<tr height=100>
-				<td colspan="3" align="center"><h1 class="font-effect-neon SBoyyy">Admin Registration</h1></td>
-			</tr>
-
-			<tr height=50>
-				<td width="200px">Admin Unique ID</td>
-				<td width="300px">
-					<input type="text" name="adminusername" value="">
-				</td>
-			
-			</tr>
-			<tr height=50>
-				<td>Admin Password </td>
-				<td><input type="password" name="adminpass" value=""></td>
-				
-			</tr>
-			<tr height=50>
-				<td>Address</td>
-				<td><input type="text" name="Address" value=""></td>
-				
-			</tr>
-			<tr height=50>
-				<td>Phone No</td>
-				<td><input type="text" name="PhoneNo" value=""></td>
-				
-			</tr>
-			<tr height=50>
-				<td>Email</td>
-				<td><input type="text" name="Email" value=""></td>
-				
-			</tr>
-			<tr height=50>
-				<td>Other Info</td>
-				<td><input type="text" name="OtherInfo" value=""></td>
-				
-			</tr>
-			
-			
 	
-			<tr height=50>
-				<td colspan="3" align="middle">
-					<input type="submit" name="submit" value="Submit">
-				<input type="reset" name="reset" value="Reset"></td>
-				
+<table><tr><td>
+<a class="font-effect-neon SBoyyy" style="color: Green" href="adminlist.php"> Back </a>
+</td></tr></table>
+
+
+	<form method="POST" action="../controllers/admindeletecheck.php">
+		<input type="hidden" name="id" value="<?=$id?>"/>
+		
+		<fieldset>
+			<legend>Update Information</legend>
+		<table>
+			<tr>
+				<td>Admin Unique ID</td>
+				<td><input type="text" name="adminusername" value="<?php echo $userArray[0] ?>"></td>
+			</tr>
+			<tr>
+				<td>Admin Password</td>
+				<td><input type="text" name="adminpass" value="<?php echo $userArray[1]?>"></td>
+			</tr>
+			<tr>
+				<td>Address</td>
+				<td><input type="text" name="Address" value="<?php echo $userArray[2]?>"></td>
+			</tr>
+			<tr>
+				<td>Phone No</td>
+				<td><input type="text" name="PhoneNo" value="<?php echo $userArray[3]?>"></td>
+			</tr>
+			<tr>
+				<td>Email</td>
+				<td><input type="text" name="Email"  value="<?php echo $userArray[4]?>"></td>
+			</tr>
+			<tr>
+				<td>Other Info</td>
+				<td><input type="text" name="OtherInfo"  value="<?php echo $userArray[5]?>"></td>
+			</tr>
+		
+			<tr>
+				<td></td>
+				<td><input type="submit" name="update" value="Delete"></td>
 			</tr>
 		</table>
-		
+		</fieldset>
 	</form>
-</center>
 
 
-	
 <Center>CopyRight@<span class="SBoyyy" style="font-size:20px;color:green"><b>E</b></span><span class="SBoyyy">asy Travels </span></Center> 
+	
 </body>
 </html>

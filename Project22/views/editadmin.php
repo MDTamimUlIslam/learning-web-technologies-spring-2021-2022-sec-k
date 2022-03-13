@@ -4,7 +4,7 @@
 
 	$id = $_GET['id'];
 
-	$file = fopen('../models/tourist.txt', 'r');
+	$file = fopen('../models/adminlist.txt', 'r');
 
 	while (!feof($file)) {
 		$user = fgets($file);
@@ -43,23 +43,23 @@
 	<a class="font-effect-neon SBoyyy" style="color: red" href="../controllers/logout.php"> logout </a>
 	
 <table><tr><td>
-<a class="font-effect-neon SBoyyy" style="color: Green" href="touristlist.php"> Back </a>
+<a class="font-effect-neon SBoyyy" style="color: Green" href="adminlist.php"> Back </a>
 </td></tr></table>
 
 
-	<form method="POST" action="../controllers/touristeditcheck.php">
+	<form method="POST" action="../controllers/admineditcheck.php">
 		<input type="hidden" name="id" value="<?=$id?>"/>
 		
 		<fieldset>
 			<legend>Update Information</legend>
 		<table>
 			<tr>
-				<td>Tourist Number</td>
-				<td><input type="text" name="touristno" value="<?php echo $userArray[0] ?>"></td>
+				<td>Admin Unique ID</td>
+				<td><input type="text" name="adminusername" value="<?php echo $userArray[0] ?>"></td>
 			</tr>
 			<tr>
-				<td>Tourist Name</td>
-				<td><input type="text" name="TouristName" value="<?php echo $userArray[1]?>"></td>
+				<td>Admin Password</td>
+				<td><input type="password" name="adminpass" value="<?php echo $userArray[1]?>"></td>
 			</tr>
 			<tr>
 				<td>Address</td>

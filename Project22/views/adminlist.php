@@ -43,6 +43,52 @@
 </table>
 
 
+
+<table border="1">
+			<tr>
+				<td>Admin Unique ID</td>
+				<td>Admin Password </td>
+				<td>Address</td>
+				<td>Phone No</td>
+				<td>Email</td>
+				<td>Other Info</td>
+			</tr>
+
+			<?php 
+				$file = fopen('../models/adminlist.txt', 'r');
+				
+				while (!feof($file)) {
+					$user = fgets($file);
+					if($user == null){
+						break;
+					}
+					
+					$userArray = explode("|", $user);
+			?>
+
+			<tr>
+				<td><?=$userArray[0]?></td>
+				<td><?=$userArray[1]?></td>
+				<td><?=$userArray[2]?></td>
+				<td><?=$userArray[3]?></td>
+				<td><?=$userArray[4]?></td>
+				<td><?=$userArray[5]?></td>
+			
+				<td>
+					<a href="../views/editadmin.php?id=<?=$userArray[0]?>"> EDIT </a> | 
+					<a href="../views/deleteadmin.php?id=<?=$userArray[0]?>"> DELETE </a>  
+				</td> 
+			</tr>
+
+			<?php
+				}
+			?>
+			
+			
+			
+		</table>
+
+
 <Center>CopyRight@<span class="SBoyyy" style="font-size:20px;color:green"><b>E</b></span><span class="SBoyyy">asy Travels </span></Center> 
 	
 </body>
