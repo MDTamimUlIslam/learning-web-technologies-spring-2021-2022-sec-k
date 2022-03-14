@@ -54,7 +54,7 @@
 			<legend>Update Information</legend>
 		<table>
 		<tr>
-				<td>Accountant No</td>
+				<td>Accountant User ID</td>
 				<td><input type="text" name="AccountantNo" value="<?php echo $userArray[0] ?>"></td>
 			</tr>
 			<tr>

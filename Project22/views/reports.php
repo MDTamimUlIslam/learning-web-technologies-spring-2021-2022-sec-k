@@ -27,15 +27,13 @@
 <center>
 	
         <h1 class="font-effect-neon SBoyyy"> Welcome to Easy Travels- Admin.<?=$_SESSION['current_user'][0]?></h1> 
-
-	<a class="font-effect-neon SBoyyy" style="color: red" href="dash.php"> Home </a> |
-	
-	<a class="font-effect-neon SBoyyy" style="color: red" href="../controllers/logout.php"> logout </a>
+		<a class="font-effect-neon SBoyyy" style="color: red" href="dash.php"> Home </a> |
+		<a class="font-effect-neon SBoyyy" style="color: red" href="../controllers/logout.php"> logout </a>
 
 <table>
 <tr>
 <td height="150px">
-<center><img src="report.png"><br>
+<center><img src="../Photos/report.png"><br>
 	<a class="font-effect-neon SBoyyy" style="color: green" href="reports.php"> User's Issues </a>
 	</td>
 </tr>

@@ -36,7 +36,7 @@
 <tr>
 <td>
 <center>
-<img src="3.png"><br>
+<img src="../Photos/3.png"><br>
 	<a class="font-effect-neon SBoyyy" style="color: green" href="newadmin.php"> Add New Admin </a>
 	</td>
 </tr>

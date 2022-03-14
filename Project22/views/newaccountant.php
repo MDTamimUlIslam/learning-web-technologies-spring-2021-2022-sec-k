@@ -36,7 +36,7 @@
 <tr>
 <td>
 <center>
-<img src="4.png"><br>
+<img src="../Photos/4.png"><br>
 	<a class="font-effect-neon SBoyyy" style="color: green" href="newaccountant.php"> Add New Accountant </a>
 	</td>
 </tr>
@@ -44,7 +44,7 @@
 	
 		<table border="1"width="50%">
 		<tr>
-				<td>No</td>
+				<td>Accountant User ID</td>
 				<td><input type="text" name="no" value=""></td>
 			</tr>
 			<tr>

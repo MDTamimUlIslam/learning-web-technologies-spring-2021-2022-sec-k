@@ -1,1 +1,5 @@
-03|Md Tamim Ul Islam|568|01558877845|BCom|Male|2022-03-15|B+
+001|Khorsed Alam|alam|01531978220|B.COM(Finance)|Male|1994-02-14|A-
+002|Tanjil Amin|amin|01789561236|B.COM(Finance)|Male|1991-02-28|O+|
+003|Nadia Karim|nadia|015588778458|B.COM(Finance)|Female|1997-07-28|B-|
+004|Sabbir Ahsan|sabbir|01963254125|B.COM(Finance)|Male|1987-10-14|A-|
+005|Ajanta Das|das|01574125896|B.COM(Finance)|Female|1984-10-05|A+

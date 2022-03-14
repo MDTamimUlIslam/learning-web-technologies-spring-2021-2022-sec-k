@@ -1,3 +1,5 @@
-Tamim101|123|44/2 Borobag, Mirpur-2,Dhaka|01733991643|tamimullislam2012@gmail.com|Senior Admin
-Nazifa102|126|nazifa@gmail.com|012569878569|rased@gmail.com|Registered Admin
-Faiz220|123456789|44/2 Borobag, Mirpur-2,Dhaka|01733991643|faiz@gmail.com|Junior Admin
+Tamim101|123|44/2 Borobag, Mirpur-2,Dhaka|01733991643|tamim@gmail.com|Senior Admin
+Faiz220|220|11-2,Dhanmondi,Dhaka|01785412369|faiz@gmail.com|Junior Admin
+Kazi111|111|C-Block,Mirpur,Dhaka|01585245673|kazi@gmail.com|Junior Admin
+Labib445|445|2/3-Halisohor,Chittagong|01975364163|labib@gmail.com|Junior Admin|
+Nazifa852|852|Atlanta,Gorgia,USA|09445685575|nazifa@gmail.com|Senior Admin|

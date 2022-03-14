@@ -3,7 +3,6 @@
 	require('header.php');
 	
 ?>
-
 <html>
 <head>	
 	<title>Home Page</title>
@@ -27,16 +26,15 @@
 
 <center>
 	
-        <h1 class="font-effect-neon SBoyyy"> Welcome to Easy Travels- Admin.<?=$_SESSION['current_user'][0]?></h1> 
+    <h1 class="font-effect-neon SBoyyy"> Welcome to Easy Travels- Admin.<?=$_SESSION['current_user'][0]?></h1> 
 
 	<a class="font-effect-neon SBoyyy" style="color: red" href="dash.php"> Home </a> |
-	
 	<a class="font-effect-neon SBoyyy" style="color: red" href="../controllers/logout.php"> logout </a>
 
 <table>
 <tr>
 <td height="150px">
-<center><img src="book.png"><br>
+<center><img src="../Photos/book.png"><br>
 	<a class="font-effect-neon SBoyyy" style="color: green" href="bookinglist.php">Booking Info</a>
 	</td>
 </tr>

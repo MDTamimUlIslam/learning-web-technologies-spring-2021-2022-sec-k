@@ -35,7 +35,7 @@
 <table>
 <tr>
 <td height="150px">
-<center><img src="2.png"><br>
+<center><img src="../Photos/2.png"><br>
 	<a class="font-effect-neon SBoyyy" style="color: green" href="serviceproviderlist.php"> Service Providers List </a>
 	</td>
 </tr>

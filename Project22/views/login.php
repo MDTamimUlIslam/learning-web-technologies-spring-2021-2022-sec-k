@@ -46,7 +46,7 @@
 				
 			</tr>
 			<tr height="300px">
-			<td colspan="3"><img src="logo.jpg" width="680px" height="400px"></td>
+			<td colspan="3"><img src="../Photos/logo1.jpg" width="680px" height="400px"></td>
             </tr>
 			<tr> <td colspan="3"align="down"><Center>CopyRight@<span class="SBoyyy" style="font-size:20px;color:green"><b>E</b></span><span class="SBoyyy">asy Travels </span></Center> </td></tr>
 		</table>

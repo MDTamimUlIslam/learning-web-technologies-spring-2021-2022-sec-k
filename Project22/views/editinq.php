@@ -4,7 +4,7 @@
 
 	$id = $_GET['id'];
 
-	$file = fopen('../models/accountant.txt', 'r');
+	$file = fopen('../models/inq.txt', 'r');
 
 	while (!feof($file)) {
 		$user = fgets($file);
@@ -43,54 +43,27 @@
 	<a class="font-effect-neon SBoyyy" style="color: red" href="../controllers/logout.php"> logout </a>
 	
 <table><tr><td>
-<a class="font-effect-neon SBoyyy" style="color: Green" href="accountantlist.php"> Back </a>
+<a class="font-effect-neon SBoyyy" style="color: Green" href="inq.php"> Back </a>
 </td></tr></table>
 
 
-	<form method="POST" action="../controllers/accountanteditcheck.php">
+	<form method="POST" action="../controllers/inqeditcheck.php">
 		<input type="hidden" name="id" value="<?=$id?>"/>
 		
 		<fieldset>
-			<legend>Update Information</legend>
+			<legend>Inquiry Reply</legend>
 		<table>
-		<tr>
-				<td>Accountant User ID</td>
-				<td><input type="text" name="AccountantNo" value="<?php echo $userArray[0] ?>"></td>
+			<tr>
+				<td>Inquiry Question</td>
+				<td><input type="text" name="InquiryQuestion" value="<?php echo $userArray[0] ?>"></td>
 			</tr>
 			<tr>
-				<td>Accountant Name</td>
-				<td><input type="text" name="AccountantName" value="<?php echo $userArray[1] ?>"></td>
+				<td>Reply From Admin</td>
+				<td><input type="text" name="ReplyFromAdmin" value="<?php echo $userArray[1]?>"></td>
 			</tr>
-			<tr>
-				<td>Password</td>
-				<td><input type="password" name="Password" value="<?php echo $userArray[2]?>"></td>
-			</tr>
-			<tr>
-				<td>Phone</td>
-				<td><input type="Phone" name="Phone" value="<?php echo $userArray[3]?>"></td>
-			</tr>
-			<tr>
-				<td>Educational Qualification</td>
-				<td><input type="text" name="education" value="<?php echo $userArray[4]?>"></td>
-			</tr>
-			<tr>
-				<td>Gender</td>
-				<td><input type="text" name="gender"  value="<?php echo $userArray[5]?>"></td>
-			</tr>
-			
-			<tr>
-				<td>Date of Birth</td>
-				<td><input type="text" name="date"  value="<?php echo $userArray[6]?>"></td>
-			</tr>
-			<tr>
-				<td>bloodGroup</td>
-				<td><input type="text" name="bloodGroup"  value="<?php echo $userArray[7]?>"></td>
-			</tr>
-			
-		
 			<tr>
 				<td></td>
-				<td><input type="submit" name="update" value="update"></td>
+				<td><input type="submit" name="update" value="Admin Reply"></td>
 			</tr>
 		</table>
 		</fieldset>

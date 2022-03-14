@@ -37,10 +37,10 @@
 <table border="0">
 	<tr>
 	<td colspan="3" align="center" height=150px width=350px>
-	<center><img src="addacc.png"><br>
+	<center><img src="../Photos/addacc.png"><br>
 	<center><a class="font-effect-neon SBoyyy" style="color: red" href="newaccountant.php"> Add New Accountant </a> </td>
 	<td >
-	<center><img src="addadmin.png"><br>
+	<center><img src="../Photos/addadmin.png"><br>
 		<center><a class="font-effect-neon SBoyyy" style="color: red" href="newadmin.php"> Add New Admin </a> </center>
 	</td>
 	</tr>
@@ -49,21 +49,21 @@
 <tr>
 	<td width="250px" height="100px" >
 	<center>
-		<img src="3.png"><br>
+		<img src="../Photos/3.png"><br>
 		<a class="font-effect-neon SBoyyy" style="color: red" href="adminlist.php"> Admin list </a> 
 </center>
 	</td>
 		<td width="250px">
 		<center>
-		<img src="1.png"><br>
+		<img src="../Photos/1.png"><br>
 		<a class="font-effect-neon SBoyyy" style="color: red" href="touristlist.php"> Tourist list </a> </td>
 		<td width="250px"> 
 		<center>
-		<img src="2.png"><br>
+		<img src="../Photos/2.png"><br>
 		<a class="font-effect-neon SBoyyy" style="color: red" href="serviceproviderlist.php"> Service Provider list </a></td>
 		<td width="250px">
 		<center>
-		<img src="4.png"><br>
+		<img src="../Photos/4.png"><br>
 		<a class="font-effect-neon SBoyyy" style="color: red" href="accountantlist.php"> Accountant list </a> 
 		</td>
 	</tr>
@@ -71,7 +71,7 @@
 <table>
 <tr>
 <td width="250px" height="150px" >
-<center><img src="book.png"><br>
+<center><img src="../Photos/book.png"><br>
 	<a class="font-effect-neon SBoyyy" style="color: red" href="Bookinglist.php"> Booking Details </a>
 	</td>
 </tr>
@@ -79,13 +79,13 @@
 <table>
 <tr>
 		<td width="250px"> 
-		<center><img src="inq.png"><br>
+		<center><img src="../Photos/inq.png"><br>
 		<a class="font-effect-neon SBoyyy" style="color: red" href="inq.php"> Inquiries </a></td>
 		<td width="250px" height="100px" >
-		<center><img src="information.png"><br>
+		<center><img src="../Photos/information.png"><br>
 		<a class="font-effect-neon SBoyyy" style="color: red" href="aboutus.php"> About Us </a> </td>
 		<td width="250px">
-		<center><img src="report.png"><br>
+		<center><img src="../Photos/report.png"><br>
 		<a class="font-effect-neon SBoyyy" style="color: red" href="reports.php"> Report Issue </a>
 
 		</td>

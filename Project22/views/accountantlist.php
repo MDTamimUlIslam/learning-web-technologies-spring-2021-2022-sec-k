@@ -3,7 +3,6 @@
 	require('header.php');
 	
 ?>
-
 <html>
 <head>	
 	<title>Home Page</title>
@@ -21,31 +20,34 @@
     }
 		</style>
 </head>
+
+
+
+
+
+
+
 <body>
 <span class="SBoyyy" style="font-size:40px;color:green"><b>E</b></span><span class="SBoyyy">asy Travels </span>
-
-
 <center>
 	
         <h1 class="font-effect-neon SBoyyy"> Welcome to Easy Travels- Admin.<?=$_SESSION['current_user'][0]?></h1> 
-
-	<a class="font-effect-neon SBoyyy" style="color: red" href="dash.php"> Home </a> |
-	
-	<a class="font-effect-neon SBoyyy" style="color: red" href="../controllers/logout.php"> logout </a>
+		<a class="font-effect-neon SBoyyy" style="color: red" href="dash.php"> Home </a> |
+		<a class="font-effect-neon SBoyyy" style="color: red" href="../controllers/logout.php"> logout </a>
 
 <table>
 <tr>
 <td height="150px">
-<center><img src="4.png"><br>
-
-	<a class="font-effect-neon SBoyyy" style="color: green" href="accountantlist.php">Accountant List</a>
-	</td>
+<center><img src="../Photos/4.png"><br>
+<a class="font-effect-neon SBoyyy" style="color: green" href="accountantlist.php">Accountant List</a>
+</td>
 </tr>
 </table>
 
+
 <table border="1">
 			<tr>
-				<td>Accountant No</td>
+				<td>Accountant User ID</td>
 				<td>Accountant Name</td>
 				<td>Password</td>
 				<td>Phone</td>

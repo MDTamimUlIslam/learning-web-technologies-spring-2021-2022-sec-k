@@ -1,1 +1,10 @@
-2|Resort|Jeione|015577685041|Dhaka|4 Star Resort
+H101|Hotel|Raddison Blue Dhaka Water Garden|02903356|Dhaka|5 Star Resort
+H102|Hotel|Intercontinental Dhaka|02458756|Dhaka|5 Star Resort
+H103|Hotel|Pan Pacific Dhaka|025685041|Dhaka|5 Star Resort
+H104|Hotel|Raddison Blue Ctg Ocean View|02548504|Chittagong|5 Star Resort
+H105|Hotel|Rose View|01567785091|Shylet|4 Star Resort
+R201|Resort|Jeione|025698545|Dhaka|3 Star Resort
+R202|Resort|Sara|024586325|Gazipur|4 Star Resort
+R203|Resort|The Palace Luxary|024586954|Srimongol|5 Star Resort
+R204|Resort|Kashbon|02568941|Bandarban|3 Star Resort
+R205|Resort|Grand Sultan|02586973|Srimongol|5 Star Resort

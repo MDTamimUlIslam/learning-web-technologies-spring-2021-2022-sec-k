@@ -27,18 +27,36 @@
 <center>
 	
         <h1 class="font-effect-neon SBoyyy"> Welcome to Easy Travels- Admin.<?=$_SESSION['current_user'][0]?></h1> 
-
-	<a class="font-effect-neon SBoyyy" style="color: red" href="dash.php"> Home </a> |
-	
-	<a class="font-effect-neon SBoyyy" style="color: red" href="../controllers/logout.php"> logout </a>
+	    <a class="font-effect-neon SBoyyy" style="color: red" href="dash.php"> Home </a> |
+	    <a class="font-effect-neon SBoyyy" style="color: red" href="../controllers/logout.php"> logout </a>
 
 <table>
 <tr>
 <td>
+<center>
 	<a class="font-effect-neon SBoyyy" style="color: green" href="myinfo.php"> My Info </a>
-	
-    
-	</td>
+</center>
+<center>
+<h4 class="font-effect-neon SBoyyy"><?=$_SESSION['current_user'][5]?></h4> 
+</center>
+
+ <h4 class="font-effect-neon SBoyyy">User ID    :    <?=$_SESSION['current_user'][0]?></h4> 
+ <h4 class="font-effect-neon SBoyyy">Address :  <?=$_SESSION['current_user'][2]?></h4> 
+ <h4 class="font-effect-neon SBoyyy">Mobile  :   <?=$_SESSION['current_user'][3]?></h4> 
+ <h4 class="font-effect-neon SBoyyy">Email   :    <?=$_SESSION['current_user'][4]?></h4> 
+
+ <center>
+ <h3 class="font-effect-neon SBoyyy" style="color: Green">Upload Admin Photo</h3> 
+</center>
+            <form method="POST" action="../controllers/uploadphotocheck.php" enctype="multipart/form-data">
+			Upload Image: <input type="file" name="myfile">
+			<input type="submit" name="submit" value="Submit">	
+             <center><P> *Note: File must be named as UserID</P></center>
+
+			</form>
+ 
+
+</td>
 </tr>
 </table>
 
