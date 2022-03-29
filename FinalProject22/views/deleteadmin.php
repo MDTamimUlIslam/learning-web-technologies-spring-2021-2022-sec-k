@@ -1,18 +1,9 @@
 <?php 
 
 	require('header.php');
-
-	$id = $_GET['id'];
-
-	$file = fopen('../models/adminlist.txt', 'r');
-
-	while (!feof($file)) {
-		$user = fgets($file);
-		$userArray = explode('|', $user);
-		if($userArray[0] == $id){
-			break;
-		}
-	}
+	require('../models/adminlist.php');
+	$adminusername = $_REQUEST['adminusername'];
+	$user = getUserById($adminusername);
 ?>
 <html>
 <head>	
@@ -48,36 +39,34 @@
 
 
 	<form method="POST" action="../controllers/admindeletecheck.php">
-		<input type="hidden" name="id" value="<?=$id?>"/>
+		
 		
 		<fieldset>
 			<legend>Update Information</legend>
 		<table>
 			<tr>
-				<td>Admin Unique ID</td>
-				<td><input type="text" name="adminusername" value="<?php echo $userArray[0] ?>"></td>
+			<td>Admin Unique ID</td>
+				<td><input type="text" name="adminusername" value="<?=$user['adminusername']?>"></td>
 			</tr>
 			<tr>
 				<td>Admin Password</td>
-				<td><input type="text" name="adminpass" value="<?php echo $userArray[1]?>"></td>
+				<td><input type="password" name="adminpass" value="<?=$user['adminpass']?>"></td>
 			</tr>
 			<tr>
 				<td>Address</td>
-				<td><input type="text" name="Address" value="<?php echo $userArray[2]?>"></td>
+				<td><input type="text" name="Address" value="<?=$user['Address']?>"></td>
 			</tr>
 			<tr>
 				<td>Phone No</td>
-				<td><input type="text" name="PhoneNo" value="<?php echo $userArray[3]?>"></td>
+				<td><input type="text" name="PhoneNo" value="<?=$user['PhoneNo']?>"></td>
 			</tr>
 			<tr>
 				<td>Email</td>
-				<td><input type="text" name="Email"  value="<?php echo $userArray[4]?>"></td>
+				<td><input type="text" name="Email"  value="<?=$user['Email']?>"></td>
 			</tr>
 			<tr>
 				<td>Other Info</td>
-				<td><input type="text" name="OtherInfo"  value="<?php echo $userArray[5]?>"></td>
-			</tr>
-		
+				<td><input type="text" name="OtherInfo"  value="<?=$user['OtherInfo']?>"></td>
 			<tr>
 				<td></td>
 				<td><input type="submit" name="update" value="Delete"></td>

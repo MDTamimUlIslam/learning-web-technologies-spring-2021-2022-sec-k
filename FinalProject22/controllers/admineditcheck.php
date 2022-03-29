@@ -15,7 +15,7 @@
 	
 		$user = ['adminusername'=>$adminusername, 'adminpass'=>$adminpass, 'Address'=>$Address, 'PhoneNo'=> $PhoneNo, 'Email'=> $Email,'OtherInfo'=> $OtherInfo];
 
-		$status = getUserById($adminusername);
+		$status = editUser($user);
 	
 		if($status){
 			header('location:../views/adminlist.php');

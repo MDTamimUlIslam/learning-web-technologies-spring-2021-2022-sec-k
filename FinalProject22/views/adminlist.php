@@ -67,7 +67,8 @@
 	<td><?=$data['OtherInfo']?></td>
 	<td>
 		<a href="editadmin.php?adminusername=<?=$data['adminusername']?>">EDIT</a> |
-	
+		<a href="../controllers/admindeletecheck2.php?adminusername=<?=$data['adminusername']?>">DELETE</a> 
+		
 	</td>
 </tr>
 
