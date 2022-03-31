@@ -1,18 +1,12 @@
 <?php 
 
-	require('header.php');
+	
+require('header.php');
 
-	$id = $_GET['id'];
-
-	$file = fopen('../models/bookings.txt', 'r');
-
-	while (!feof($file)) {
-		$user = fgets($file);
-		$userArray = explode('|', $user);
-		if($userArray[0] == $id){
-			break;
-		}
-	}
+require('../models/bookings.php');
+$id = $_REQUEST['id'];
+$user = getUserById($id);
+?>
 ?>
 <html>
 <head>	
@@ -48,34 +42,33 @@
 
 
 	<form method="POST" action="../controllers/bookingseditcheck.php">
-		<input type="hidden" name="id" value="<?=$id?>"/>
 		
 		<fieldset>
 			<legend>Update Booking</legend>
 		<table>
 			<tr>
 				<td>Booking Number</td>
-				<td><input type="text" name="bookingsno" value="<?php echo $userArray[0] ?>"></td>
+				<td><input type="text" name="id" value="<?=$user['id']?>"></td>
 			</tr>
 			<tr>
 				<td>Tourist</td>
-				<td><input type="text" name="tourist" value="<?php echo $userArray[1]?>"></td>
+				<td><input type="text" name="tourist" value="<?=$user['tourist']?>"></td>
 			</tr>
 			<tr>
 				<td>Service Provider</td>
-				<td><input type="text" name="Serviceprovider" value="<?php echo $userArray[2]?>"></td>
+				<td><input type="text" name="Serviceprovider" value="<?=$user['Serviceprovider']?>"></td>
 			</tr>
 			<tr>
 				<td>Place</td>
-				<td><input type="text" name="Place" value="<?php echo $userArray[3]?>"></td>
+				<td><input type="text" name="Place" value="<?=$user['Place']?>"></td>
 			</tr>
 			<tr>
 				<td>Duration</td>
-				<td><input type="text" name="Duration"  value="<?php echo $userArray[4]?>"></td>
+				<td><input type="text" name="Duration"  value="<?=$user['Duration']?>"></td>
 			</tr>
 			<tr>
 				<td>Cost</td>
-				<td><input type="text" name="Cost"  value="<?php echo $userArray[5]?>"></td>
+				<td><input type="text" name="Cost"  value="<?=$user['Cost']?>"></td>
 			</tr>
 		
 			<tr>

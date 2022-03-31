@@ -1,18 +1,10 @@
 <?php 
 
-	require('header.php');
+require('header.php');
 
-	$id = $_GET['id'];
-
-	$file = fopen('../models/inq.txt', 'r');
-
-	while (!feof($file)) {
-		$user = fgets($file);
-		$userArray = explode('|', $user);
-		if($userArray[0] == $id){
-			break;
-		}
-	}
+	require('../models/inq.php');
+	$InquiryQuestion = $_REQUEST['InquiryQuestion'];
+	$user = getUserById($InquiryQuestion);
 ?>
 <html>
 <head>	
@@ -55,11 +47,11 @@
 		<table>
 			<tr>
 				<td>Inquiry Question</td>
-				<td><input type="text" name="InquiryQuestion" value="<?php echo $userArray[0] ?>"></td>
+				<td><input type="text" name="InquiryQuestion" value="<?=$user['InquiryQuestion']?>"></td>
 			</tr>
 			<tr>
 				<td>Reply From Admin</td>
-				<td><input type="text" name="ReplyFromAdmin" value="<?php echo $userArray[1]?>"></td>
+				<td><input type="text" name="ReplyFromAdmin" value="<?=$user['ReplyFromAdmin']?>"></td>
 			</tr>
 			<tr>
 				<td></td>

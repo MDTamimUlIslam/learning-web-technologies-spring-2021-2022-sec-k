@@ -1,26 +1,21 @@
 <?php 
    
-	session_start();
+   require_once('../models/inq.php');
+
 	
 	if(isset($_REQUEST['update'])){
 		$InquiryQuestion = $_REQUEST['InquiryQuestion'];
 		$ReplyFromAdmin = $_REQUEST['ReplyFromAdmin'];
-			$file = fopen('../models/inq.txt', 'r');
-			$updatedContent = "";
 
-			while(!feof($file)){
-				$line = fgets($file);
-				$user = explode('|', $line);
-				
-				if($user[0] == $InquiryQuestion){
-					$line = $InquiryQuestion."|".$ReplyFromAdmin."\r\n";
-					//$updatedContent .= $line;
-				}
-				$updatedContent .= $line;	
-			}
-			$file = fopen('../models/inq.txt', 'w');
-			fwrite($file, $updatedContent);
-			header('location: ../views/inq.php');
+		$user = ['InquiryQuestion'=>$InquiryQuestion, 'ReplyFromAdmin'=>$ReplyFromAdmin];
+
+		$status = editUser($user);
+	
+		if($status){
+			header('location:../views/inq.php');
+		}else{
+			header('location:../views/edit.php?InquiryQuestion='.$InquiryQuestion);
+		}
 
 		
 	}

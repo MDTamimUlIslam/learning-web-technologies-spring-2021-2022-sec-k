@@ -65,8 +65,9 @@
 	<td><?=$data['ReportTopic']?></td>
 	<td><?=$data['Details']?></td>
 	<td>
-		<a href="edit.php?id=<?=$data['ReportersId']?>">EDIT</a> |
-		<a href="delete.php?id=1">DELETE</a> 
+		
+	<a href="../controllers/reportdeletecheck2.php?ReportersId=<?=$data['ReportersId']?>">DELETE</a> 
+
 	</td>
 </tr>
 

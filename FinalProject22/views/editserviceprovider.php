@@ -1,18 +1,11 @@
 <?php 
 
-	require('header.php');
+require('header.php');
 
-	$id = $_GET['id'];
-
-	$file = fopen('../models/serviceprovider.txt', 'r');
-
-	while (!feof($file)) {
-		$user = fgets($file);
-		$userArray = explode('|', $user);
-		if($userArray[0] == $id){
-			break;
-		}
-	}
+require('../models/serviceprovider.php');
+$serviceproviderno = $_REQUEST['serviceproviderno'];
+$user = getUserById($serviceproviderno);
+?>
 ?>
 <html>
 <head>	
@@ -55,27 +48,27 @@
 		<table>
 			<tr>
 				<td>Service Provider Number</td>
-				<td><input type="text" name="serviceproviderno" value="<?php echo $userArray[0] ?>"></td>
+				<td><input type="text" name="serviceproviderno" value="<?=$user['serviceproviderno']?>"></td>
 			</tr>
 			<tr>
 				<td>Service Type</td>
-				<td><input type="text" name="ServiceType" value="<?php echo $userArray[1]?>"></td>
+				<td><input type="text" name="ServiceType" value="<?=$user['ServiceType']?>"></td>
 			</tr>
 			<tr>
 				<td>Company Name</td>
-				<td><input type="text" name="CompanyName" value="<?php echo $userArray[2]?>"></td>
+				<td><input type="text" name="CompanyName" value="<?=$user['CompanyName']?>"></td>
 			</tr>
 			<tr>
 				<td>Phone No</td>
-				<td><input type="text" name="PhoneNo" value="<?php echo $userArray[3]?>"></td>
+				<td><input type="text" name="PhoneNo" value="<?=$user['PhoneNo']?>"></td>
 			</tr>
 			<tr>
 				<td>Place</td>
-				<td><input type="text" name="Place"  value="<?php echo $userArray[4]?>"></td>
+				<td><input type="text" name="Place"  value="<?=$user['Place']?>"></td>
 			</tr>
 			<tr>
 				<td>Other Info</td>
-				<td><input type="text" name="OtherInfo"  value="<?php echo $userArray[5]?>"></td>
+				<td><input type="text" name="OtherInfo"  value="<?=$user['OtherInfo']?>"></td>
 			</tr>
 		
 			<tr>

@@ -35,6 +35,49 @@ return $con;
 		return $result;
 	}
 
+
+
+
+	function getUserById($InquiryQuestion){
+		$con = getConnection();
+	    $sql = "select * from inq where InquiryQuestion='{$InquiryQuestion}'";
+		$result = mysqli_query($con, $sql);
+		$user = mysqli_fetch_assoc($result);
+		return $user;
+	}
+
+    function editUser($user){
+		$con = getConnection();
+		$sql = "update inq set InquiryQuestion='{$user['InquiryQuestion']}', ReplyFromAdmin='{$user['ReplyFromAdmin']}' where InquiryQuestion='{$user['InquiryQuestion']}'";
+		if(mysqli_query($con, $sql)){
+			return true;
+		}else{
+			return false;
+		}
+    }
+
+	// function deleteUser($adminusername){
+	// 	$con = getConnection();
+	// 	$sql = "delete adminlist where adminusername='{$adminusername}'";
+	// 	if(mysqli_query($con, $sql)){
+	// 		return true;
+	// 	}else{
+	// 		return false;
+	// 	}
+	// }
+
+
+	function deleteplace($InquiryQuestion)
+{
+    $con = getConnection();
+    $sql = $con->prepare("DELETE FROM inq WHERE InquiryQuestion=?");
+    $sql->bind_param("s", $InquiryQuestion);
+    $respone = $sql->execute();
+   $sql->close();
+    $con->close();
+    return $respone;
+}
+
     ?>
 
     

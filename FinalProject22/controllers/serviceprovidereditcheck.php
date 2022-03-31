@@ -1,10 +1,11 @@
 <?php 
+    require_once('../models/serviceprovider.php');
    
-	session_start();
+ 
 	
 	if(isset($_REQUEST['update'])){
 		
-		$serviceproviderno = $_REQUEST['id'];
+		$serviceproviderno = $_REQUEST['serviceproviderno'];
 		$ServiceType = $_REQUEST['ServiceType'];
 		$CompanyName = $_REQUEST['CompanyName'];
 		$PhoneNo = $_REQUEST['PhoneNo'];
@@ -12,24 +13,17 @@
 		$OtherInfo = $_REQUEST['OtherInfo'];
 	
 	
-			$file = fopen('../models/serviceprovider.txt', 'r');
-			$updatedContent = "";
+			
+		$user = ['serviceproviderno'=>$serviceproviderno, 'ServiceType'=>$ServiceType, 'CompanyName'=>$CompanyName, 'PhoneNo'=> $PhoneNo, 'Place'=> $Place,'OtherInfo'=> $OtherInfo];
 
-			while(!feof($file)){
-				$line = fgets($file);
-				$user = explode('|', $line);
-				
-				if($user[0] == $serviceproviderno){
-					$line = $serviceproviderno."|".$ServiceType."|".$CompanyName. "|" .$PhoneNo."|".$Place."|".$OtherInfo."\r\n";
-					//$updatedContent .= $line;
-				}
-				$updatedContent .= $line;
-				
-			}
-
-			$file = fopen('../models/serviceprovider.txt', 'w');
-			fwrite($file, $updatedContent);
-			header('location: ../views/serviceproviderlist.php');
+		$status = editUser($user);
+	
+		if($status){
+			header('location:../views/serviceproviderlist.php');
+		}else{
+			header('location:../views/edit.php?serviceproviderno='.$serviceproviderno);
+		}
+	
 
 		
 	}

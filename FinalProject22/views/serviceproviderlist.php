@@ -68,8 +68,8 @@
 	<td><?=$data['Place']?></td>
 	<td><?=$data['OtherInfo']?></td>
 	<td>
-		<a href="edit.php?id=<?=$data['serviceproviderno']?>">EDIT</a> |
-		<a href="delete.php?id=1">DELETE</a> 
+	<a href="editserviceprovider.php?serviceproviderno=<?=$data['serviceproviderno']?>">EDIT</a> |
+		<a href="../controllers/serviceproviderdeletecheck2.php?serviceproviderno=<?=$data['serviceproviderno']?>">DELETE</a> 
 	</td>
 </tr>
 

@@ -1,10 +1,9 @@
 <?php 
-   
-	session_start();
+     require_once('../models/bookings.php');
 	
 	if(isset($_REQUEST['update'])){
 		
-		$bookingsno = $_REQUEST['id'];
+		$id = $_REQUEST['id'];
 		$tourist = $_REQUEST['tourist'];
 		$Serviceprovider = $_REQUEST['Serviceprovider'];
 		$Place = $_REQUEST['Place'];
@@ -12,25 +11,16 @@
 		$Cost = $_REQUEST['Cost'];
 	
 	
-			$file = fopen('../models/bookings.txt', 'r');
-			$updatedContent = "";
+		$user = ['id'=>$id, 'tourist'=>$tourist, 'Serviceprovider'=>$Serviceprovider, 'Place'=> $Place, 'Duration'=> $Duration,'Cost'=> $Cost];
 
-			while(!feof($file)){
-				$line = fgets($file);
-				$user = explode('|', $line);
-				
-				if($user[0] == $bookingsno){
-					$line = $bookingsno."|".$tourist."|".$Serviceprovider. "|" .$Place."|".$Duration."|".$Cost."\r\n";
-					//$updatedContent .= $line;
-				}
-				$updatedContent .= $line;
-				
-			}
-
-			$file = fopen('../models/bookings.txt', 'w');
-			fwrite($file, $updatedContent);
-			header('location: ../views/bookinglist.php');
-
+		$status = editUser($user);
+	
+		if($status){
+			header('location:../views/bookinglist.php');
+		}else{
+			header('location:../views/edit.php?id='.$id);
+		}
+	
 		
 	}
 ?>

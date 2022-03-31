@@ -35,6 +35,18 @@ return $con;
 		return $result;
 	}
 
+
+	function deleteplace($ReportersId)
+	{
+		$con = getConnection();
+		$sql = $con->prepare("DELETE FROM Reports WHERE ReportersId=?");
+		$sql->bind_param("s", $ReportersId);
+		$respone = $sql->execute();
+	   $sql->close();
+		$con->close();
+		return $respone;
+	}
+
     ?>
 
     

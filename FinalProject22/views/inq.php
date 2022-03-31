@@ -62,8 +62,8 @@
 	<td><?=$data['ReplyFromAdmin']?></td>
 	
 	<td>
-		<a href="edit.php?id=<?=$data['InquiryQuestion']?>">EDIT</a> |
-		<a href="delete.php?id=1">DELETE</a> 
+	<a href="editinq.php?InquiryQuestion=<?=$data['InquiryQuestion']?>">Reply</a> |
+	
 	</td>
 </tr>
 

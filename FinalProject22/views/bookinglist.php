@@ -62,8 +62,8 @@
 	<td><?=$data['Duration']?></td>
 	<td><?=$data['Cost']?></td>
 	<td>
-		<a href="edit.php?id=<?=$data['id']?>">EDIT</a> |
-		<a href="delete.php?id=1">DELETE</a> 
+	<a href="editbookings.php?id=<?=$data['id']?>">EDIT</a> |
+		<a href="../controllers/bookingsdeletecheck2.php?id=<?=$data['id']?>">DELETE</a> 
 	</td>
 </tr>
 
