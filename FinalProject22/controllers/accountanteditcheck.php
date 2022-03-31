@@ -1,6 +1,6 @@
 <?php 
    
-	session_start();
+   require_once('../models/accountant.php');
 	
 	if(isset($_REQUEST['update'])){
 		$AccountantNo = $_REQUEST['AccountantNo'];
@@ -14,24 +14,16 @@
 		
 	
 	
-			$file = fopen('../models/accountant.txt', 'r');
-			$updatedContent = "";
+		$user = ['AccountantNo'=>$AccountantNo, 'AccountantName'=>$AccountantName, 'Password'=>$Password, 'Phone'=> $Phone, 'education'=> $education,'gender'=> $gender, 'date'=> $date, 'bloodGroup'=> $bloodGroup];
 
-			while(!feof($file)){
-				$line = fgets($file);
-				$user = explode('|', $line);
-				
-				if($user[0] == $AccountantNo){
-					$line =$AccountantNo."|".$AccountantName."|".$Password."|".$Phone."|".$education."|".$gender."|".$date."|".$bloodGroup."\r\n";
-					//$updatedContent .= $line;
-				}
-				$updatedContent .= $line;
-				
-			}
-
-			$file = fopen('../models/accountant.txt', 'w');
-			fwrite($file, $updatedContent);
-			header('location: ../views/accountantlist.php');
+		$status = editUser($user);
+	
+		if($status){
+			header('location:../views/accountantlist.php');
+		}else{
+			header('location:../views/edit.php?AccountantNo='.$AccountantNo);
+		}
+	
 
 		
 	}

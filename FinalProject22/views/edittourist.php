@@ -1,19 +1,11 @@
 <?php 
-
-	require('header.php');
-
-	$id = $_GET['id'];
-
-	$file = fopen('../models/tourist.txt', 'r');
-
-	while (!feof($file)) {
-		$user = fgets($file);
-		$userArray = explode('|', $user);
-		if($userArray[0] == $id){
-			break;
-		}
-	}
+require('header.php');
+require('../models/touristlist.php');
+$id = $_REQUEST['id'];
+$user = getUserById($id);
 ?>
+
+
 <html>
 <head>	
 	<title>Home Page</title>
@@ -48,34 +40,34 @@
 
 
 	<form method="POST" action="../controllers/touristeditcheck.php">
-		<input type="hidden" name="id" value="<?=$id?>"/>
+	
 		
 		<fieldset>
 			<legend>Update Information</legend>
 		<table>
 			<tr>
 				<td>Tourist Number</td>
-				<td><input type="text" name="touristno" value="<?php echo $userArray[0] ?>"></td>
+				<td><input type="text" name="id" value="<?=$user['id']?>"></td>
 			</tr>
 			<tr>
 				<td>Tourist Name</td>
-				<td><input type="text" name="TouristName" value="<?php echo $userArray[1]?>"></td>
+				<td><input type="text" name="TouristName" value="<?=$user['TouristName']?>"></td>
 			</tr>
 			<tr>
 				<td>Address</td>
-				<td><input type="text" name="Address" value="<?php echo $userArray[2]?>"></td>
+				<td><input type="text" name="Address" value="<?=$user['Address']?>"></td>
 			</tr>
 			<tr>
 				<td>Phone No</td>
-				<td><input type="text" name="PhoneNo" value="<?php echo $userArray[3]?>"></td>
+				<td><input type="text" name="PhoneNo" value="<?=$user['PhoneNo']?>"></td>
 			</tr>
 			<tr>
 				<td>Email</td>
-				<td><input type="text" name="Email"  value="<?php echo $userArray[4]?>"></td>
+				<td><input type="text" name="Email"  value="<?=$user['Email']?>"></td>
 			</tr>
 			<tr>
 				<td>Other Info</td>
-				<td><input type="text" name="OtherInfo"  value="<?php echo $userArray[5]?>"></td>
+				<td><input type="text" name="OtherInfo"  value="<?=$user['OtherInfo']?>"></td>
 			</tr>
 		
 			<tr>

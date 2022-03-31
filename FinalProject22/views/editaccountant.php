@@ -40,43 +40,42 @@
 
 
 	<form method="POST" action="../controllers/accountanteditcheck.php">
-		<input type="hidden" name="id" value="<?=$id?>"/>
-		
+	
 		<fieldset>
 			<legend>Update Information</legend>
 		<table>
 		<tr>
 				<td>Accountant User ID</td>
-				<td><input type="text" name="AccountantNo" value="<?=$accountant['AccountantNo']?>"></td>
+				<td><input type="text" name="AccountantNo" value="<?=$user['AccountantNo']?>"></td>
 			</tr>
 			<tr>
 				<td>Accountant Name</td>
-				<td><input type="text" name="AccountantName" value="<?=$accountant['AccountantName']?>"></td>
+				<td><input type="text" name="AccountantName" value="<?=$user['AccountantName']?>"></td>
 			</tr>
 			<tr>
 				<td>Password</td>
-				<td><input type="password" name="Password" value="<?=$accountant['Password']?>"></td>
+				<td><input type="password" name="Password" value="<?=$user['Password']?>"></td>
 			</tr>
 			<tr>
 				<td>Phone</td>
-				<td><input type="Phone" name="Phone" value="<?=$accountant['Phone']?>"></td>
+				<td><input type="Phone" name="Phone" value="<?=$user['Phone']?>"></td>
 			</tr>
 			<tr>
 				<td>Educational Qualification</td>
-				<td><input type="text" name="education" value="<?=$accountant['education']?>"></td>
+				<td><input type="text" name="education" value="<?=$user['education']?>"></td>
 			</tr>
 			<tr>
 				<td>Gender</td>
-				<td><input type="text" name="gender"  value="<?=$accountant['gender']?>"></td>
+				<td><input type="text" name="gender"  value="<?=$user['gender']?>"></td>
 			</tr>
 			
 			<tr>
 				<td>Date of Birth</td>
-				<td><input type="text" name="date"  value="<?=$accountant['date']?>"></td>
+				<td><input type="text" name="date"  value="<?=$user['date']?>"></td>
 			</tr>
 			<tr>
 				<td>bloodGroup</td>
-				<td><input type="text" name="bloodGroup"  value="<?=$accountant['bloodGroup']?>"></td>
+				<td><input type="text" name="bloodGroup"  value="<?=$user['bloodGroup']?>"></td>
 			</tr>
 			
 		

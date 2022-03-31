@@ -19,7 +19,7 @@ return $con;
 
     function signup($AccountantNo,$AccountantName,$password,$Phone,$education,$gender,$date,$bloodGroup){
 		$con = getConnection();
-		$sql = "insert into accountant values('{$AccountantNo}', '{$AccountantName}', '{$password}', '{$Phone}','{$education}','{$gender}','{$date}','{$bloodGroup}')";
+		$sql = "insert into accountant values('{$AccountantNo}', '{$AccountantName}', '{$password}', '{$Phone}','{$education}','{$education}','{$date}','{$bloodGroup}')";
 
 		if(mysqli_query($con, $sql)){
 			return true;
@@ -39,12 +39,32 @@ return $con;
 
 	function getUserById($AccountantNo){
 		$con = getConnection();
-	    $sql = "select * from adminlist where AccountantNo={$AccountantNo}";
+	    $sql = "select * from accountant where AccountantNo='{$AccountantNo}'";
 		$result = mysqli_query($con, $sql);
 		$user = mysqli_fetch_assoc($result);
 		return $user;
 	}
 
+	function editUser($user){
+		$con = getConnection();
+		$sql = "update accountant set AccountantNo='{$user['AccountantNo']}', AccountantName='{$user['AccountantName']}', Password='{$user['Password']}', Phone='{$user['Phone']}', education='{$user['education']}', gender='{$user['gender']}', date='{$user['date']}', bloodGroup='{$user['bloodGroup']}' where AccountantNo='{$user['AccountantNo']}'";
+		if(mysqli_query($con, $sql)){
+			return true;
+		}else{
+			return false;
+		}
+    }
+
+	function deleteplace($AccountantNo)
+{
+    $con = getConnection();
+    $sql = $con->prepare("DELETE FROM accountant WHERE AccountantNo=?");
+    $sql->bind_param("s", $AccountantNo);
+    $respone = $sql->execute();
+   $sql->close();
+    $con->close();
+    return $respone;
+}
 
 
     ?>

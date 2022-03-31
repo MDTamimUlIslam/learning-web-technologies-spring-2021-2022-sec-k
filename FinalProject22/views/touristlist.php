@@ -66,8 +66,8 @@
 	<td><?=$data['Email']?></td>
 	<td><?=$data['OtherInfo']?></td>
 	<td>
-		<a href="edit.php?id=<?=$data['id']?>">EDIT</a> |
-		<a href="delete.php?id=1">DELETE</a> 
+	<a href="edittourist.php?id=<?=$data['id']?>">EDIT</a> |
+		<a href="../controllers/touristdeletecheck2.php?id=<?=$data['id']?>">DELETE</a> 
 	</td>
 </tr>
 

@@ -1,10 +1,10 @@
 <?php 
    
-	session_start();
+   require_once('../models/touristlist.php');
 	
 	if(isset($_REQUEST['update'])){
 		
-		$touristno = $_REQUEST['id'];
+		$id = $_REQUEST['id'];
 		$TouristName = $_REQUEST['TouristName'];
 		$Address = $_REQUEST['Address'];
 		$PhoneNo = $_REQUEST['PhoneNo'];
@@ -12,24 +12,16 @@
 		$OtherInfo = $_REQUEST['OtherInfo'];
 	
 	
-			$file = fopen('../models/tourist.txt', 'r');
-			$updatedContent = "";
+		$user = ['id'=>$id, 'TouristName'=>$TouristName, 'Address'=>$Address, 'PhoneNo'=> $PhoneNo, 'Email'=> $Email,'OtherInfo'=> $OtherInfo];
 
-			while(!feof($file)){
-				$line = fgets($file);
-				$user = explode('|', $line);
-				
-				if($user[0] == $touristno){
-					$line = $touristno."|".$TouristName."|".$Address. "|" .$PhoneNo."|".$Email."|".$OtherInfo."\r\n";
-					//$updatedContent .= $line;
-				}
-				$updatedContent .= $line;
-				
-			}
-
-			$file = fopen('../models/tourist.txt', 'w');
-			fwrite($file, $updatedContent);
-			header('location: ../views/touristlist.php');
+		$status = editUser($user);
+	
+		if($status){
+			header('location:../views/touristlist.php');
+		}else{
+			header('location:../views/edit.php?adminusername='.$adminusername);
+		}
+	
 
 		
 	}

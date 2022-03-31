@@ -73,9 +73,8 @@
 	<td><?=$data['date']?></td>
 	<td><?=$data['bloodGroup']?></td>
 	<td>
-		<a href="editaccountant.php?AccountantNo=<?=$data['AccountantNo']?>">EDIT</a> |
-		<a href="delete.php?id=1">DELETE</a> 
-	</td>
+	<a href="editaccountant.php?AccountantNo=<?=$data['AccountantNo']?>">EDIT</a> |
+		<a href="../controllers/accountantdeletecheck2.php?AccountantNo=<?=$data['AccountantNo']?>">DELETE</a> 
 </tr>
 
 <?php } ?>
