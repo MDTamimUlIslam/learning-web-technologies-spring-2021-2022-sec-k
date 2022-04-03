@@ -26,7 +26,7 @@
 
 <center>
 	
-        <h1 class="font-effect-neon SBoyyy"> Welcome to Easy Travels- Admin.<?=$_SESSION['current_user'][0]?></h1> 
+        <h1 class="font-effect-neon SBoyyy"> Welcome to Easy Travels- Admin.</h1> 
 
 	<a class="font-effect-neon SBoyyy" style="color: red" href="dash.php"> Home </a> |
 	<a class="font-effect-neon SBoyyy" style="color: red" href="myinfo.php"> My Info </a> |

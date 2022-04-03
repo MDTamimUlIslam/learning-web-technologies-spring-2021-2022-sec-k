@@ -7,6 +7,33 @@
 <html>
 <head>	
 	<title>Home Page</title>
+	<script type = "text/javascript">
+   
+      // Form validation code .
+      function validate() {
+      
+         if( document.myForm.adminusername.value == "" ) {
+            alert( "Please provide your name!" );
+            document.myForm.adminusername.focus() ;
+            return false;
+         }
+		 if( document.myForm.adminpass.value == "" || isNaN( document.myForm.adminpass.value ) ||
+            document.myForm.adminpass.value.length != 5 ) {
+            
+            alert( "Please provide Longer Password" );
+            document.myForm.adminpass.focus() ;
+            return false;
+         }
+         if( document.myForm.Email.value == "" ) {
+            alert( "Please provide your Email!" );
+            document.myForm.Email.focus() ;
+            return false;
+         }
+
+         return( true );
+      }
+   //-->
+</script>
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide">
 	<style>
         *{
@@ -26,7 +53,7 @@
 
 <center>
 	
-        <h1 class="font-effect-neon SBoyyy"> Welcome to Easy Travels- Admin.<?=$_SESSION['current_user'][0]?></h1> 
+        <h1 class="font-effect-neon SBoyyy"> Welcome to Easy Travels- Admin.</h1> 
 
 	<a class="font-effect-neon SBoyyy" style="color: red" href="dash.php"> Home </a> |
 	<a class="font-effect-neon SBoyyy" style="color: red" href="myinfo.php"> My Info </a> |
@@ -42,7 +69,7 @@
 </tr>
 </table>
 
-<form method="POST" action="../controllers/newadmincheck.php" enctype="multipart/form-data">
+<form method="POST" action="../controllers/newadmincheck.php" enctype="multipart/form-data" name = "myForm" onsubmit = "return(validate());">
 
 		<table border="1" width="50%">
 
